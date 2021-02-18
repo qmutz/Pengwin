@@ -75,7 +75,7 @@ steps:
     serviceEndpoint: 'Whitewater Foundry'
     appId: '9NV1GV1PXZ6P'
     flightName: 'Azure Pipelines'
-    packagePath: '**\*.appxupload'
+    packagePath: '$(Build.ArtifactStagingDirectory)\**\*.appxupload'
     force: true
     skipPolling: false
     deletePackages: true
