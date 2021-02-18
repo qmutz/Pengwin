@@ -41,24 +41,6 @@ steps:
   name: signingCert
   inputs:
     secureFile: 'store.pfx'
-#- task: PowerShell@2
-#  inputs:
-#    targetType: 'inline'
-#    script: |
-#      Invoke-WebRequest -Uri 'https://sonarcloud.io/static/cpp/build-wrapper-win-x86.zip' -OutFile 'build-wrapper.zip'
-#      Expand-Archive -Path 'build-wrapper.zip' -DestinationPath '.'
-#- task: SonarCloudPrepare@1
-#  inputs:
-#    SonarCloud: 'SonarCloud'
-#    organization: 'whitewaterfoundry'
-#    scannerMode: 'MSBuild'
-#    projectKey: 'Pengwin'
-#    projectName: 'Pengwin'
-#    projectVersion: '20.8.1'
-#    sonar.cfamily.build-wrapper-output: '.'
-#- task: CmdLine@2
-#  inputs:
-#    script: 'build-wrapper-win-x86\build-wrapper-win-x86-64.exe --out-dir .'
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
@@ -66,7 +48,7 @@ steps:
     platform: 'x64'
     configuration: '$(buildConfiguration)'
     msbuildArchitecture: 'x64'
-#- task: SonarCloudAnalyze@1
+
 
 - task: CopyFiles@2
   inputs:
@@ -78,6 +60,13 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
-#- task: SonarCloudPublish@1
-#  inputs:
-#    pollingTimeoutSec: '300'
+- task: store-flight@0
+  inputs:
+    serviceEndpoint: 'Whitewater Foundry'
+    appId: '9NV1GV1PXZ6P'
+    flightName: 'Azure Pipelines'
+    packagePath: 
+    force: true
+    skipPolling: false
+    deletePackages: true
+    numberOfPackagesToKeep: '1'
