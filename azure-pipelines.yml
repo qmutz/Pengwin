@@ -60,15 +60,15 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
-- task: store-publish@0
-  inputs:
-    serviceEndpoint: 'Whitewater Foundry'
-    appId: '9NV1GV1PXZ6P'
-    packagePath: 
-    force: false
-    skipPolling: false
-    deletePackages: true
-    numberOfPackagesToKeep: '1'
+#- task: store-publish@0
+#  inputs:
+#    serviceEndpoint: 'Whitewater Foundry'
+#    appId: '9NV1GV1PXZ6P'
+#    packagePath: 
+#    force: false
+#    skipPolling: false
+#    deletePackages: true
+#    numberOfPackagesToKeep: '1'
 - task: store-flight@0
   inputs:
     serviceEndpoint: 'Whitewater Foundry'
