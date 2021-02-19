@@ -72,7 +72,7 @@ steps:
     appId: '9NV1GV1PXZ6P'
     packagePath: '$(Build.ArtifactStagingDirectory)\**\*bundle.appxupload'
     force: false
-    skipPolling: true
+    skipPolling: false
     deletePackages: true
     numberOfPackagesToKeep: '0'
 - task: store-flight@0
