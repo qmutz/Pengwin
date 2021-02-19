@@ -56,6 +56,11 @@ steps:
     SourceFolder: '$(appxPackageDir)'
     Contents: '**\*bundle.appxupload'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(appxPackageDir)'
+    Contents: '**\*bundle.appxbundle'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
