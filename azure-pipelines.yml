@@ -68,6 +68,7 @@ steps:
     publishLocation: 'Container'
 - task: store-publish@0
   continueOnError: true
+  timeoutInMinutes: 10
   inputs:
     serviceEndpoint: 'Whitewater Foundry'
     appId: '9NV1GV1PXZ6P'
