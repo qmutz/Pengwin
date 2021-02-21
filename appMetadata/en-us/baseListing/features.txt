@@ -1,0 +1,8 @@
+Pengwin includes wslu, a set of useful open-source utilities for interacting between WSL and Windows 10.
+A custom pengwin-setup tool, accessible via $ pengwin-setup allows new Pengwin users to get started on Linux immediately.
+Support for many Linux graphical applications with no need to configure display or libGL in Pengwin. Requires a Windows-based X client, such as X410 or VcXsrv.
+Install 28,728 open source packages via the apt package management system from the expansive Debian repositories and any third-party Debian-compatible repositories from outside projects.
+A handful of unnecessary packages have been removed from the base image to reduce image size and increase stability.
+New features are actively developed based on community input. You can earn paid grants improving WLinux.
+Create Windows Start Menu items from Linux desktop apps or deploy a one-click LAMP stack.
+Install your favorite Linux terminal: Konsole, Terminator, Tilix, etc

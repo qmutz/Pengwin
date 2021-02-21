@@ -67,15 +67,20 @@ steps:
     ArtifactName: 'drop'
     publishLocation: 'Container'
 - task: store-publish@0
+  continueOnError: true
   inputs:
     serviceEndpoint: 'Whitewater Foundry'
     appId: '9NV1GV1PXZ6P'
+    metadataUpdateMethod: 'TextMetadata'
+    metadataPath: '$(System.DefaultWorkingDirectory)\appMetadata'
+    updateImages: false
     packagePath: '$(Build.ArtifactStagingDirectory)\**\*bundle.appxupload'
     force: true
     skipPolling: false
     deletePackages: true
     numberOfPackagesToKeep: '0'
 - task: store-flight@0
+  continueOnError: true
   inputs:
     serviceEndpoint: 'Whitewater Foundry'
     appId: '9NV1GV1PXZ6P'
