@@ -1,5 +1,8 @@
 Existing users can update immediately by running $ pengwin-setup update
 
+21.3.1:
+* Include the latest packages in the image.
+
 21.3.0:
 * Improved again the compatibility of SDKMan and IntelliJ 2021.1 enabling Maven installed via SDKMan
 * Included out of the box full GUI support with mesa and dbus, just install your GUI app via apt
@@ -25,6 +28,3 @@ Existing users can update immediately by running $ pengwin-setup update
 
 * Adjusted pinning rules to enable regular PPAs
 
-21.1.2:
-* Now Pengwin shows a helpful Message of the day giving information of the WSL environment.
-* Improved the winhome link creation with non-standard Windows Home Folder, like the ones that are in H:
