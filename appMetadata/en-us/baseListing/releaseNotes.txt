@@ -1,5 +1,13 @@
 Existing users can update immediately by running $ pengwin-setup update
 
+21.4.1:
+* Updated CMake to version 3.19.1 
+* Updated pyenv python to version 3.9.4
+* Fixed a hang with fish and dbus
+* Improved Poetry installer
+* Added Prezto support ZSH installer
+* Do not override DISPLAY variable if it is already defined
+ 
 21.3.1:
 * Include the latest packages in the image.
 
@@ -14,17 +22,7 @@ Existing users can update immediately by running $ pengwin-setup update
 21.2.1:
 
 * Improved Java installation via SDKMan and now it is compatible with IntelliJ IDEA 2021.1 EAP 3. You can now have your entire Java project on Pengwin, compile and execute everything from IntelliJ in Windows.
-
 * Upgraded to Homebrew 3
 * Upgraded the embedded VCXsrv to 1.20.9.0
-
 * Fixed a problem with the AWS CLI installer. We are working to bring the AWS CLI version 2 soon.
-
 * Ported the integration for CLion to every JetBrains tool. A new pengwin-setup item was added to support it. If you face problems with JetBrains tools, especially 2020 and older, run this command.
-
-* Fixed a leftover of the Cassandra installer. If you see an error message about "proc" please reinstall Cassandra or uninstall it if you are not using it anymore.
-
-* Upgraded Ruby on pengwin-setup and added compatibility with RubyMine
-
-* Adjusted pinning rules to enable regular PPAs
-
